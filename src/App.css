@@ -1,0 +1,14 @@
+.nav{
+	display: flex;
+	justify-content: flex-end;
+}
+.nav-link{
+	font-size: 1.2em;
+	background-color: #cccccc;
+}
+.nav-link:hover{
+	color: grey;
+}
+a{
+	color: black;
+}
