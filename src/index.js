@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-	Switch
-} from 'react-router-dom';
-
-import Navigation from './components/Navigation';
-import AddPost from './components/AddPost';
-import Posts from './components/Posts';
+import './App.css';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
+import DummyPosts from './dummy-posts';
+import PostList from './components/AllPosts';
 
 
-ReactDOM.render(
-	<Router>
-		<div>
-			<Switch>
-				<Route path="/" component={App} />
-			</Switch>
-		</div>
-	</Router>
+const dummyPosts = DummyPosts;
 
-,
-	document.getElementById('root'));
+class App extends Component {
+	constructor(props){
+		super(props);
+		this.state = { posts: dummyPosts };
+	}
+
+
+	render(){
+		return (
+			<div>
+				<Header />
+				<SearchBar />
+				<PostList posts={this.state.posts} />
+			</div>
+		);
+	}
+}
+
+
+ReactDOM.render(<App />, document.getElementById('root'));

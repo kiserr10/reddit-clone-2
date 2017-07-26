@@ -1,20 +1,35 @@
-module.exports = {
-	post1: {
-		title: 'Rock Climbing',
-		image_url: '../images/climbing.jpg',
-		body: 'Badass Sport',
-		author: 'Ross Kiser',
-	},
-	post2: {
-		title: 'Foodies',
-		image_url: '../images/food.jpg',
-		body: 'Best Dishes In The World',
-		author: 'Ross Kiser',
-	},
-	post3: {
-		title: 'Cars',
-		image_url: '../images/car.jpg',
-		body: 'I Love Me Some Cars',
-		author: 'Ross Kiser',
-	},
-};
+module.exports = [{
+	id: 1,
+	title: 'Rock Climbing',
+	image_url: 'http://blog.alexbuisse.com/wp-content/uploads/public/better-rock-climbing/climb-yourself.jpg',
+	body: 'Badass Sport',
+	author: 'Ross Kiser',
+},
+{
+	id: 2,
+	title: 'Foodies',
+	image_url: 'https://static1.squarespace.com/static/54b3f75ee4b0cdf625ece0b0/t/56a01d17fb36b1be191dd048/1453333785451/market+basket+blueberries+radishes+cropped.jpg?format=1500w',
+	body: 'Best Dishes In The World',
+	author: 'Koss Riser',
+},
+{
+	id: 3,
+	title: 'Birds',
+	image_url: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Pu_La_Deshpande_garden_birds.JPG',
+	body: 'Fly Ass Birds',
+	author: 'Ross Boss',
+},
+{
+	id: 4,
+	title: 'Cats',
+	image_url: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Push_van_cat.jpg',
+	body: 'Funniest Cats In The World',
+	author: 'Ross Sanchez',
+},
+{
+	id: 5,
+	title: 'Cars',
+	image_url: 'https://localareaguide.com/userfiles/Brakes-in-Merridian-ID.jpg',
+	body: 'I Love Me Some Cars',
+	author: 'Ross Day',
+}];

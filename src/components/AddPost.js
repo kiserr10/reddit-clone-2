@@ -13,7 +13,7 @@ export default class AddPost extends Component {
 	}
 	createPost(event){
 		event.preventDefault();
-		console.log('making posts');
+		// console.log('making posts');
 		const newPost = {
 			title: this.title.value,
 			body: this.body.value,
