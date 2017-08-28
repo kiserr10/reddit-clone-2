@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class AddComment extends Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 		this.handleChange = this.handleChange.bind(this);
 		this.addComment = this.addComment.bind(this);
 		this.state={
@@ -12,15 +12,33 @@ class AddComment extends Component {
 			}]
 		};
 	}
+	addComment(event){
+		event.preventDefault();
+		this.props.getComment(this.state.comments, this.props.postId);
+		this.setState({
+			comments: {
+				body: ''
+			}
+		});
+	}
+
+	handleChange(e){
+		this.setState({
+			comments: {
+				[e.target.id]: e.target.value,
+				date: Date.now()
+			}
+		});
+	}
 
 	render() {
 		return (
       <div className="row">
         <div className="col-md-offset-1">
           <hr />
-          <form className="form-inline">
+          <form onSubmit={this.addComment} className="form-inline">
             <div className="form-group">
-              <input type="text" id="body" className="form-control" />
+              <input type="text" onChange={this.handleChange} value={this.state.comments.body} id="body" className="form-control" />
             </div>
             <div className="form-group">
               <input type="submit" className="btn btn-primary" />
