@@ -22,10 +22,10 @@ class AddComment extends Component {
 		});
 	}
 
-	handleChange(e){
+	handleChange(event){
 		this.setState({
 			comments: {
-				[e.target.id]: e.target.value,
+				[event.target.id]: event.target.value,
 				date: Date.now()
 			}
 		});

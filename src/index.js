@@ -20,8 +20,8 @@ class App extends Component{
 		this.sortData = this.sortData.bind(this);
 		this.state = {
 			term: '',
-			filterType: 'title',
 			newPostFormShow: false,
+			filterType: 'title',
 			posts: DummyPosts
 		};
 	}
@@ -69,9 +69,9 @@ class App extends Component{
 		});
 	}
 
-	sortFilter(sort){
+	sortFilter(sortType){
 		this.setState({
-			filterType: sort
+			filterType: sortType
 		});
 	}
 
@@ -109,7 +109,6 @@ class App extends Component{
 						return(
 						<SinglePost
 							getComment={this.getComment}
-							rating={post.rating}
 							postId={i}
 							key={i}
 							post={post} />

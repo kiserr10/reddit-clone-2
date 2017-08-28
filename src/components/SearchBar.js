@@ -4,7 +4,7 @@ class SearchBar extends Component {
 	constructor(){
 		super();
 		this.onInputChange = this.onInputChange.bind(this);
-		this.handleSort = this.handleSort.bind(this);
+		this.handleSorts = this.handleSorts.bind(this);
 		this.state = {
 			term: ''
 		};
@@ -14,7 +14,7 @@ class SearchBar extends Component {
 		this.props.searchTerm(term);
 	}
 
-	handleSort(event){
+	handleSorts(event){
 		this.setState({
 			filterType: event.target.value
 		});
@@ -32,7 +32,7 @@ class SearchBar extends Component {
 					</li>
 					<div className="form-inline">
 						<label for="sort">Sort By</label>
-						<select className="form-control" id="sort" value={this.state.sortType} onChange={this.handleSort}>
+						<select className="form-control" id="sort" value={this.state.sortType} onChange={this.handleSorts}>
 							<option value="title">Title</option>
 							<option value="date">Date</option>
 							<option value="votes">Votes</option>
